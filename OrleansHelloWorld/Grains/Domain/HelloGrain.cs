@@ -1,13 +1,11 @@
 ﻿using GrainInterfaces.Integration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Orleans.Providers;
 using System.Threading.Tasks;
 
 namespace Grains.Domain
 {
-    public class HelloGrain : Orleans.Grain, IHello
+    public class HelloGrain : Orleans.Grain<string>, IHello
     {
         private readonly ILogger logger;
 
